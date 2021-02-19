@@ -1,0 +1,7 @@
+{
+  "name": "traimolo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
