@@ -1,6 +1,7 @@
 <template>
     <base-layout page-title="Traimolo" default-back-link="/landing">
            <div class="landing-container" :style="{ backgroundImage: 'url(' + require('@/assets/traimogo_landing_2.png') + ')'}">
+<back-button default-back-link="/landing" />
                    <div style="padding-top:200px; padding-bottom:20px">
                    <ion-img class="landing-image" border-radius="50%" :src="traimogo_logo" alt="traimolo" style="height:auto;width:250px;"></ion-img>
                     </div>
@@ -16,10 +17,13 @@
 <script>
 import {IonImg, IonButton} from '@ionic/vue'
 import {computed } from 'vue'
+import BackButton from '../components/base/BackButton.vue'
+
 export default {
     components: {
         IonImg ,
-        IonButton   
+        IonButton ,
+        BackButton
     },
    computed:{
        names() {

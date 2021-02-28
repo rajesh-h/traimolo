@@ -1,6 +1,9 @@
 <template>
     <base-layout page-title="Welcome">
-           <div class="landing-container" :style="{ backgroundImage: 'url(' + require('@/assets/traimolo_landing.png') + ')'}">
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+           <div class="landing-container" :style="{background: 'linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(' + require('@/assets/traimolo_landing_5.jpg') + ')', backgroundSize:'cover', }">
                    <div style="padding-top:200px; padding-bottom:20px">
                    <ion-img class="landing-image" border-radius="50%" :src="traimolo_logo" alt="traimolo" style="height:auto;width:250px;"></ion-img>
                     </div>
@@ -10,6 +13,8 @@
                     <ion-button router-link="/traimolo" shape="round" fill="outline" class="landing-button">Enter</ion-button>
                 </div>
                 </div>
+                </ion-col>
+                <ion-col>
                 <div class="landing-container" :style="{ backgroundImage: 'url(' + require('@/assets/traimogo_landing.png') + ')'}">
                    <div style="padding-top:200px; padding-bottom:20px">
                    <ion-img class="landing-image" border-radius="50%" :src="traimogo_logo" alt="traimolo" style="height:auto;width:250px;"></ion-img>
@@ -20,16 +25,23 @@
                     <ion-button router-link="/traimogo" shape="round" fill="outline" class="landing-button">Enter</ion-button>
                 </div>
                 </div>
+                </ion-col>
+                </ion-row>
+            </ion-grid>
        </base-layout>
 </template>
 
 <script>
-import {IonImg, IonButton} from '@ionic/vue'
+import {IonImg, IonButton, IonGrid, IonRow, IonCol} from '@ionic/vue'
 import {computed } from 'vue'
 export default {
     components: {
         IonImg ,
-        IonButton   
+        IonButton ,
+        IonGrid,
+        IonRow,
+        IonCol,
+
     },
    computed:{
        names() {
